@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,15 +10,26 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Inter', sans-serif;
+}
+
 .container {
     max-width: 1170px;
     margin: auto;
+}
+
+.container2 {
+    max-width: 1052px;
+    margin: auto;
+
 }
 
 .pointer span {
     cursor: pointer;
     padding-bottom: 20px;
 }
+
 
 .pointer span:hover {
     color: #A6ABAE;
@@ -39,4 +52,229 @@
     height: 100vh;
     width: 100%;
     object-fit: cover;
+}
+
+.links span {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.links span::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #020202;
+    transition: .3s;
+}
+
+.links span:hover::before {
+    width: 100%;
+    background-color: #020202;
+}
+
+.trending-bg {
+    position: relative;
+    background-image: url(../../public/imgs/bike.jpg);
+    height: 100vh;
+    background-position: center;
+}
+
+.trending-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+
+.slider-container {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/* .menu {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.9s ease-in-out, transform 0.9s ease-in-out;
+    background-color: #0E1E32;
+  }
+  
+  .menu.open {
+    opacity: 1;
+    transform: translateX(0%);
+  } */
+
+
+body {
+    overflow: hidden;
+}
+
+.div8 {
+    opacity: 0;
+    transform: translateY(100%);
+    animation: left1 0.3s ease-in-out forwards;
+}
+
+@keyframes left1 {
+    from {
+        opacity: 0;
+        transform: translateY(42%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.dots {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+}
+
+.dot {
+    border: none;
+    width: 15x;
+    height: 15x;
+    background: #c5c5c5;
+    border-radius: 50%;
+    margin: 0 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.dot:focus {
+    outline: none;
+}
+
+.dot.active {
+    background: #000;
+}
+
+
+
+@media only screen and (max-width: 1022px) {
+
+    .trending-bg {
+        height: 80vh;
+    }
+
+    .width {
+        max-width: 100% !important;
+    }
+
+    .card-img {
+        height: 200px !important;
+    }
+
+    .popular-main {
+        display: block !important;
+    }
+}
+
+
+@media only screen and (max-width: 515px) {
+
+    .trending-bg {
+        height: 150vh;
+    }
+
+    .text-size {
+        font-size: 20px;
+    }
+
+    .bg-img {
+        height: 80vh;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    .card {
+        display: block !important;
+    }
+
+    /* .imgheight {
+        max-width: 100% !important;
+        display: flex;
+        justify-content: center;
+    } */
+}
+
+
+
+
+
+[class^="number-slide"],
+[class*=" number-slide"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    color: #fff;
+    font-weight: 500;
+    max-height: 100vh;
+}
+
+.navigation-wrapper {
+    position: relative;
+}
+
+.dots {
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+}
+
+.dot {
+    border: none;
+    width: 10px;
+    height: 10px;
+    background: #c5c5c5;
+    border-radius: 50%;
+    margin: 0 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.dot:focus {
+    outline: none;
+}
+
+.dot.active {
+    background: #000;
+}
+
+.keen-slider {
+    transition: height 0.3s;
 }

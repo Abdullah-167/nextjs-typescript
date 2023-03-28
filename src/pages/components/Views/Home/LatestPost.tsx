@@ -8,23 +8,25 @@ import Image from 'next/image'
 
 const LatestPost = () => {
     return (
-        <div className='container pb-20'>
-            <div className='flex gap-20 justify-between'>
+        <div className='container pb-20 sm:pb-20 pt-10'>
+            <div className='flex gap-20 justify-between px-5'>
                 <div>
-                    <Title fontWeight='600' maxWidth='100px' title1='Explore' title2='Latest Post' />
-                    <div>
+                    <span className='text-3xl sm:text-[42px]'>
+                        <Title fontWeight='600'  title1='Explore' title2='Latest Post' />
+                    </span>
+                    <div className='pt-10'>
                         {items.map((item, index) => {
                             return (
                                 <div key={index}>
-                                    <div className='pt-5 pb-20'>
-                                        <Card image={item.img} title={item.title} buttonTitle={item.buttonTitle} fontSize={'20px'} seccolor={''} square={undefined} fontweight={'600'} display={'flex'} maxWidth={'400px'} visible={''} gap={'20px'} alignItems={''} maxHeight={'200px'} title2={item.subTitle} secFontweight={undefined} secFontSize={'16px'} />
+                                    <div className='pt-5 pb-10 sm:pb-20 card'>
+                                        <Card image={item.img} title={item.title} buttonTitle={item.buttonTitle} seccolor={''} square={undefined} fontweight={'600'} display={'flex'} maxWidth={'400px'} visible={''} gap={'20px'} alignItems={''} maxHeight={'200px'} title2={item.subTitle} secFontweight={undefined} secFontSize={'16px'} show={''}/>
                                     </div>
                                 </div>
                             )
                         })}
                     </div>
                 </div>
-                <div className='min-w-[300px] pt-5'>
+                <div className='hidden lg:block min-w-[300px] pt-5'>
                     <div className='sticky top-0'>
                         <h1 className='text-2xl font-semibold'>Authors</h1>
                         <div className='flex gap-3 items-center'>

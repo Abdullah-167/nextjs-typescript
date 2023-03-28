@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import React from 'react'
 import Card from '../../Card'
 import Title from '../Title'
@@ -10,20 +9,21 @@ import { MdKeyboardArrowRight } from 'react-icons/md';
 
 
 const Explore = () => {
+    
     return (
-        <div className='container'>
-            <div className='pt-14'>
-                <Title title1='Explore' title2='Trending Topics' fontWeight='500' maxWidth='50px' />
+        <div className='text-size container px-5'>
+            <div className='text-2xl sm:text-[42px] pt-10 text-center sm:text-left sm:pt-14 pb-7 sm:pb-10'>
+                <Title title1='Explore' title2='Trending Topics' fontWeight='500'/>
             </div>
-            <div className='flex justify-between gap-5s'>
+            <div className='flex flex-wrap justify-center sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-items-center gap-5 pt-5'>
                 {items.map((item, index) => {
                     return (
                         <div key={index}>
                             <div className='max-w-[300px]'>
-                                <Card image={item.img} buttonTitle={item.buttonTitle} title={item.title} fontSize={''} seccolor={''} square={undefined} fontweight={''} display={''} maxWidth={undefined} visible={''} gap={''} alignItems={''} maxHeight={''} title2={''} secFontweight={undefined} secFontSize={undefined} />
-                                <div className='flex gap-[2px] items-center font-semibold cursor-pointer pt-4'>
+                                <Card image={item.img} buttonTitle={item.buttonTitle} title={item.title} seccolor={''} fontweight={''} display={''} visible={''} gap={''} alignItems={''} title2={''} secFontweight={undefined} secFontSize={undefined} show={''} imgMaxHeight={''} width={undefined} outerImg={''} minHeight={''}  />
+                                <div className='flex gap-[1px] items-center font-semibold cursor-pointer pt-4'>
                                     <span className='hover:pr-1 transition-all duration-300'>View Topic</span>
-                                    <a className='pt-[5px] hover:pl-1 transition-all duration-300'><MdKeyboardArrowRight /></a>
+                                    <a className='hover:pl-1 transition-all duration-300'><MdKeyboardArrowRight /></a>
                                 </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@ const items = [
     },
     {
         buttonTitle: "LIFE STYLE",
-        title: "A curation of interests and activities based on the designers life.",
+        title: "View articles about the most recent trends on Architecture",
         img: Stachu
 
     },

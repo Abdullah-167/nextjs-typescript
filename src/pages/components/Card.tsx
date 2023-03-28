@@ -1,4 +1,3 @@
-
 import { FC } from "react"
 import Image from 'next/image'
 import Button from './Buton';
@@ -8,26 +7,27 @@ interface CardProps {
   tag?: string;
   title: string;
   buttonTitle: string;
-  fontSize: string;
   seccolor: string;
-  maxheight?: string;
-  square: any;
   fontweight: string;
   display: string;
-  maxWidth: any;
   visible: string;
   gap: string;
   alignItems: string;
-  maxHeight: string;
   title2: string;
   secFontweight: any;
   secFontSize: any;
+  show: string;
+  imgMaxHeight:string;
+  width:any;
+  outerImg:string;
+  minHeight:string;
 }
 
-const Card: FC<CardProps> = ({ image, tag = "tag", title = "title", buttonTitle, fontSize = "16px", seccolor, fontweight, display, maxWidth, visible, gap, alignItems, maxHeight, title2, secFontweight, secFontSize }: CardProps) => {
+const Card: FC<CardProps> = ({ image, tag = "tag", title = "title", buttonTitle, seccolor, fontweight, display, visible, gap, alignItems, title2, secFontweight, show, imgMaxHeight , width , outerImg  , minHeight}: CardProps) => {
 
   return (
     <div
+      className="card"
       style={
         {
           display: display,
@@ -36,16 +36,26 @@ const Card: FC<CardProps> = ({ image, tag = "tag", title = "title", buttonTitle,
         }
       }
     >
-      <div
-        style={
-          {
-            maxWidth: maxWidth,
-            maxHeight: maxHeight
+      <div className="flex justify-center overflow-hidden">
+        <div
+          style={
+            {
+              display: show,
+              maxHeight:outerImg,
+            }
           }
-        }
-      >
-        <Image
-          src={image} width={1000} height={100} alt={tag} />
+          className={`transition-all duration-500 transform-gpu hover:scale-105`}>
+          <Image  
+          style={
+            {
+              maxHeight:imgMaxHeight,
+              minWidth:width,
+              minHeight:minHeight
+            }
+          }
+          className={`object-cover`}
+            src={image} width={1000} height={100} alt={tag} />
+        </div>
       </div>
       <div className='pt-3'>
         <span>
@@ -54,7 +64,6 @@ const Card: FC<CardProps> = ({ image, tag = "tag", title = "title", buttonTitle,
         <p className='pt-4'
           style={
             {
-              fontSize: fontSize,
               color: seccolor,
               fontWeight: fontweight
             }
@@ -65,7 +74,6 @@ const Card: FC<CardProps> = ({ image, tag = "tag", title = "title", buttonTitle,
         <p className='pt-4'
           style={
             {
-              fontSize: secFontSize,
               color: seccolor,
               fontWeight: secFontweight
             }
