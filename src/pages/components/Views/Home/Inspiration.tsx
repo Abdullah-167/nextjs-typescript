@@ -10,7 +10,7 @@ import { BsInstagram } from 'react-icons/bs';
 const Inspiration = () => {
     const [hoveredIndex, setHoveredIndex] = useState(null);
 
-    const handleHover = (index) => {
+    const handleHover = (index:any) => {
         setHoveredIndex(index);
     };
 

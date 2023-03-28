@@ -19,7 +19,7 @@ const LatestPost = () => {
                             return (
                                 <div key={index}>
                                     <div className='pt-5 pb-10 sm:pb-20 card'>
-                                        <Card image={item.img} title={item.title} buttonTitle={item.buttonTitle} seccolor={''} square={undefined} fontweight={'600'} display={'flex'} maxWidth={'400px'} visible={''} gap={'20px'} alignItems={''} maxHeight={'200px'} title2={item.subTitle} secFontweight={undefined} secFontSize={'16px'} show={''}/>
+                                        <Card image={item.img} title={item.title} buttonTitle={item.buttonTitle} seccolor={''} fontweight={'600'} display={'flex'} visible={''} gap={'20px'} alignItems={''} title2={item.subTitle} secFontweight={undefined} secFontSize={'16px'} show={''} imgMaxHeight={''} width={undefined} outerImg={''} minHeight={''}/>
                                     </div>
                                 </div>
                             )

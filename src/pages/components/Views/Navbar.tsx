@@ -6,11 +6,14 @@ import BlogButton from '../Buton'
 import { CiSearch } from 'react-icons/ci';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { RxCross2 } from 'react-icons/rx';
+
 function Navbar() {
-    const [menuOpen, setMenuOpen] = useState()
+    
+    const [menuOpen, setMenuOpen] = useState(false)
+    
 
     const toggleMenu = () => {
-        setMenuOpen(prev => !prev);
+        setMenuOpen(!menuOpen);
     };
     useEffect(() => {
         if (menuOpen) {

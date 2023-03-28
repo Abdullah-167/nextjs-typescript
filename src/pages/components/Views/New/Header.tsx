@@ -17,18 +17,18 @@ const Header = () => {
         setIsExpanded(!isExpanded);
     }
 
-    useEffect(() => {
-        const handleOutsideClick = (event: { target: any; }) => {
-            if (isExpanded && inputRef.current && !inputRef.current.contains(event.target)) {
-                setIsExpanded(false);
-            }
-        };
+    // useEffect(() => {
+    //     const handleOutsideClick = (event: { target: any; }) => {
+    //         if (isExpanded && inputRef.current && !inputRef?.current.contains(event.target)) {
+    //             setIsExpanded(false);
+    //         }
+    //     };
 
-        document.addEventListener('mousedown', handleOutsideClick);
-        return () => {
-            document.removeEventListener('mousedown', handleOutsideClick);
-        };
-    }, [isExpanded]);
+    //     document.addEventListener('mousedown', handleOutsideClick);
+    //     return () => {
+    //         document.removeEventListener('mousedown', handleOutsideClick);
+    //     };
+    // }, [isExpanded]);
 
     return (
         <div className='container'>

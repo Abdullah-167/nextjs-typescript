@@ -19,7 +19,7 @@ const Popular = () => {
                                 <div key={index}>
                                     <div className='flex max-w-full py-7 items-center  justify-between gap-20 border-b-[1px] border-b-black'>
                                         <span className=' text-[20px] sm:text-2xl'>
-                                            <Card image={item.img} title={item.title} buttonTitle={''} seccolor={''} fontweight={'600'} display={'flex'} visible='none' gap={'20px'} alignItems={'center'} title2={''} secFontweight={undefined} secFontSize={undefined} show={''} imgMaxHeight={''} width={undefined} outerImg={'200px'} />
+                                            <Card image={item.img} title={item.title} buttonTitle={''} seccolor={''} fontweight={'600'} display={'flex'} visible='none' gap={'20px'} alignItems={'center'} title2={''} secFontweight={undefined} secFontSize={undefined} show={''} imgMaxHeight={''} width={undefined} outerImg={'200px'} minHeight={''} />
                                         </span>
                                         <span className='hidden lg:flex text-2xl font-semibold'>{item.counting}</span>
                                     </div>
@@ -36,7 +36,7 @@ const Popular = () => {
                                 return (
                                     <div key={index}>
                                         <div className='py-4 border-b-[1px] border-b-black pt-5 sm:pt-10'>
-                                            <Card image={item.img} title={item.title} buttonTitle={'AUTOMOTIVE'} seccolor={''} fontweight={'700'} display={''} visible={''} gap={''} alignItems={''} title2={''} secFontweight={undefined} secFontSize={undefined} show={''} width={''} imgMaxHeight={'200px'} outerImg={''} />
+                                            <Card image={item.img} title={item.title} buttonTitle={'AUTOMOTIVE'} seccolor={''} fontweight={'700'} display={''} visible={''} gap={''} alignItems={''} title2={''} secFontweight={undefined} secFontSize={undefined} show={''} width={''} imgMaxHeight={'200px'} outerImg={''} minHeight={''} />
                                         </div>
                                     </div>
                                 )
