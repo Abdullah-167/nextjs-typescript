@@ -11,7 +11,7 @@ const ImageGalery = () => {
             <div className='justify-items-center grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 gap-5 border-b-[1px] border-b-black pb-10'>
                 {images.map((item, index) => {
                     return (
-                        <div className='overflow-hidden'>
+                        <div className='overflow-hidden' key={index}>
                             <div className='max-w-full sm:max-w-[300px] max-h-[300px] transform-gpu hover:scale-105 transition-all duration-700' key={index}>
                                 <Image src={item.img} alt={item.tag} width={1000} height={100} />
                             </div>

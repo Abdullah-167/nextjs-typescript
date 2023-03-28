@@ -51,8 +51,8 @@ const Header = () => {
             <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-items-center gap-4 py-10 px-5'>
                 {data.map((item, index) => {
                     return (
-                        <div>
-                            <div key={index} className="relative cursor-pointer  transition duration-300">
+                        <div key={index}>
+                            <div className="relative cursor-pointer  transition duration-300">
                                 <Image
                                     src={item.image}
                                     alt={item.title}
@@ -79,8 +79,8 @@ const Header = () => {
 
                                 {item.subCategories.map((category, idx) => {
                                     return (
-                                        <div>
-                                            <div key={idx}>
+                                        <div key={idx}>
+                                            <div>
                                                 <div className='flex gap-3 my-3 items-center justify-center'>
                                                     <button className='relative text-lg flex gap-3 items-center justify-between py-3 px-7 rounded-xl text-black shadow-lg'>
                                                         <span className='font-medium'>{category.icon}</span>
