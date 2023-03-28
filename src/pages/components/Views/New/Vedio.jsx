@@ -7,7 +7,7 @@ import Mercedes from '../../../../../public/imgs/mercedes.jpg'
 export default function App() {
     const [currentSlide, setCurrentSlide] = React.useState(0)
     const [loaded, setLoaded] = useState(false)
-    const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
+    const [sliderRef, instanceRef] = useKeenSlider({
         initial: 0,
         slideChanged(slider) {
             setCurrentSlide(slider.track.details.rel)
