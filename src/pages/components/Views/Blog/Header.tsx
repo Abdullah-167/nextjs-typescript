@@ -57,7 +57,7 @@ const Header = () => {
                                 {trendingPost.map((item, index) => {
                                     return (
                                         <div key={index}>
-                                            <Card image={item.img} title={item.title} buttonTitle={item.btnTitle} seccolor={''} square={undefined} fontweight={'600'} display={''} maxWidth={undefined} visible={''} gap={''} alignItems={''} maxHeight={''} title2={''} secFontweight={undefined} secFontSize={undefined} show={''} />
+                                            <Card image={item.img} title={item.title} buttonTitle={item.btnTitle} seccolor={''} fontweight={'600'} display={''} visible={''} gap={''} alignItems={''} title2={''} secFontweight={undefined} secFontSize={undefined} show={''} imgMaxHeight={''} width={undefined} outerImg={''} minHeight={''} />
                                         </div>
                                     )
                                 })}

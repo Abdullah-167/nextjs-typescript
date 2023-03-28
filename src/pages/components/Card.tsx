@@ -17,13 +17,13 @@ interface CardProps {
   secFontweight: any;
   secFontSize: any;
   show: string;
-  imgMaxHeight:string;
-  width:any;
-  outerImg:string;
-  minHeight:string;
+  imgMaxHeight: string;
+  width: any;
+  outerImg: string;
+  minHeight: string;
 }
 
-const Card: FC<CardProps> = ({ image, tag = "tag", title = "title", buttonTitle, seccolor, fontweight, display, visible, gap, alignItems, title2, secFontweight, show, imgMaxHeight , width , outerImg  , minHeight}: CardProps) => {
+const Card: FC<CardProps> = ({ image, tag = "tag", title = "title", buttonTitle, seccolor, fontweight, display, visible, gap, alignItems, title2, secFontweight, show, imgMaxHeight, width, outerImg, minHeight }: CardProps) => {
 
   return (
     <div
@@ -41,19 +41,19 @@ const Card: FC<CardProps> = ({ image, tag = "tag", title = "title", buttonTitle,
           style={
             {
               display: show,
-              maxHeight:outerImg,
+              maxHeight: outerImg,
             }
           }
           className={`transition-all duration-500 transform-gpu hover:scale-105`}>
-          <Image  
-          style={
-            {
-              maxHeight:imgMaxHeight,
-              minWidth:width,
-              minHeight:minHeight
+          <Image
+            style={
+              {
+                maxHeight: imgMaxHeight,
+                minWidth: width,
+                minHeight: minHeight
+              }
             }
-          }
-          className={`object-cover`}
+            className={`object-cover`}
             src={image} width={1000} height={100} alt={tag} />
         </div>
       </div>
