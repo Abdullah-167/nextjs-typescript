@@ -14,7 +14,7 @@ const Editors = () => {
                         return (
                             <div key={index}>
                                 <div className='border-b-[1px] border-b-[#DADADA] pb-5'>
-                                    <Card image={item.img} buttonTitle={item.buttonTitle} title={item.title} seccolor="#FFF" fontweight={'600'} display={''} visible={''} gap={''} alignItems={''} title2={''} secFontweight={''} secFontSize={''} show={''} imgMaxHeight={'150px'} width={''} outerImg={''} minHeight={''}/>
+                                    <Card image={item.img} buttonTitle={item.buttonTitle} title={item.title} seccolor="#FFF" fontweight={'600'} display={''} visible={''} gap={''} alignItems={''} title2={''} secFontweight={''} secFontSize={''} show={''} imgMaxHeight={'150px'} width={''} outerImg={''} minHeight={''} speed={undefined}/>
                                 </div>
                             </div>
                         )
