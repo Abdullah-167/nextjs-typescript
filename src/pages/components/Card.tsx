@@ -1,6 +1,9 @@
 import { FC } from "react"
 import Image from 'next/image'
 import Button from './Buton';
+import { Parallax } from 'react-scroll-parallax';
+
+
 
 interface CardProps {
   image?: any;
@@ -21,9 +24,10 @@ interface CardProps {
   width: any;
   outerImg: string;
   minHeight: string;
+  speed:any;
 }
 
-const Card: FC<CardProps> = ({ image, tag = "tag", title = "title", buttonTitle, seccolor, fontweight, display, visible, gap, alignItems, title2, secFontweight, show, imgMaxHeight, width, outerImg, minHeight }: CardProps) => {
+const Card: FC<CardProps> = ({ image, tag = "tag", title = "title", buttonTitle, seccolor, fontweight, display, visible, gap, alignItems, title2, secFontweight, show, imgMaxHeight, width, outerImg, minHeight,speed=-2 }: CardProps) => {
 
   return (
     <div
@@ -45,16 +49,18 @@ const Card: FC<CardProps> = ({ image, tag = "tag", title = "title", buttonTitle,
             }
           }
           className={`transition-all duration-500 transform-gpu hover:scale-105`}>
-          <Image
-            style={
-              {
-                maxHeight: imgMaxHeight,
-                minWidth: width,
-                minHeight: minHeight
+          <Parallax speed={speed}>
+            <Image
+              style={
+                {
+                  maxHeight: imgMaxHeight,
+                  minWidth: width,
+                  minHeight: minHeight
+                }
               }
-            }
-            className={`object-cover`}
-            src={image} width={1000} height={100} alt={tag} />
+              className={`object-cover`}
+              src={image} width={1000} height={100} alt={tag} />
+          </Parallax>
         </div>
       </div>
       <div className='pt-3'>

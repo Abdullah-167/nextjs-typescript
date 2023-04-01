@@ -47,11 +47,11 @@ body {
 }
 
 .bg-img {
-    background-image: url(../../public/imgs/lines.png);
+    background-image: url('../../public/imgs/lines.png');
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    object-fit: cover;
+    background-size: cover;
 }
 
 .links span {
@@ -77,8 +77,9 @@ body {
 
 .trending-bg {
     position: relative;
-    background-image: url(../../public/imgs/bike.jpg);
-    height: 100vh;
+    background-image: url('../../public/imgs/bike.jpg');
+    height: 100%;
+    background-size: cover;
     background-position: center;
 }
 

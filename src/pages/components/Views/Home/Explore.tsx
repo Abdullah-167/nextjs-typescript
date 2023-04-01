@@ -20,7 +20,7 @@ const Explore = () => {
                     return (
                         <div key={index}>
                             <div className='max-w-[300px]'>
-                                <Card image={item.img} buttonTitle={item.buttonTitle} title={item.title} seccolor={''} fontweight={''} display={''} visible={''} gap={''} alignItems={''} title2={''} secFontweight={undefined} secFontSize={undefined} show={''} imgMaxHeight={''} width={undefined} outerImg={''} minHeight={''}  />
+                                <Card image={item.img} buttonTitle={item.buttonTitle} title={item.title} seccolor={''} fontweight={''} display={''} visible={''} gap={''} alignItems={''} title2={''} secFontweight={''} secFontSize={''} show={''} imgMaxHeight={''} width={''} outerImg={''} minHeight={''} speed={-5}  />
                                 <div className='flex gap-[1px] items-center font-semibold cursor-pointer pt-4'>
                                     <span className='hover:pr-1 transition-all duration-300'>View Topic</span>
                                     <a className='hover:pl-1 transition-all duration-300'><MdKeyboardArrowRight /></a>
