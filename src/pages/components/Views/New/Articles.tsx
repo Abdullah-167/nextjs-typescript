@@ -9,7 +9,7 @@ const Articles = () => {
                     {data.map((item, index) => {
                         return (
                             <div className='font-medium' key={index}>
-                                <Card image={item.img} title={item.titel} buttonTitle={item.btnTile} seccolor={''} fontweight={''} display={''} visible={''} gap={''} alignItems={''} title2={''} secFontweight={undefined} secFontSize={undefined} show={''} imgMaxHeight={'300px'} width={undefined} outerImg={''} minHeight={'300px'} />
+                                <Card image={item.img} title={item.titel} buttonTitle={item.btnTile} seccolor={''} fontweight={''} display={''} visible={''} gap={''} alignItems={''} title2={''} secFontweight={''} secFontSize={''} show={''} imgMaxHeight={'300px'} width={''} outerImg={''} minHeight={'300px'} />
                             </div>
                         )
                     })}
@@ -18,7 +18,7 @@ const Articles = () => {
                     {secData.map((item, index) => {
                         return (
                             <div className='font-medium' key={index}>
-                                <Card image={item.img} title={item.titel} buttonTitle={item.btnTile} seccolor={''} fontweight={''} display={''} visible={''} gap={''} alignItems={''} title2={''} secFontweight={undefined} secFontSize={undefined} show={''} imgMaxHeight={'300px'} width={undefined} outerImg={''} minHeight={'300px'} />
+                                <Card image={item.img} title={item.titel} buttonTitle={item.btnTile} seccolor={''} fontweight={''} display={''} visible={''} gap={''} alignItems={''} title2={''} secFontweight={''} secFontSize={''} show={''} imgMaxHeight={'300px'} width={''} outerImg={''} minHeight={'300px'} />
                             </div>
                         )
                     })}
